@@ -5,7 +5,7 @@ from .models import Mark
 
 
 class Marks(forms.ModelForm):
-    person = forms.ModelMultipleChoiceField(Person.objects.all(), label='Name')
+    person = forms.ModelChoiceField(Person.objects.all(), label='Name')
     grade = forms.CharField(label='Mark')
 
     class Meta:
